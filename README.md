@@ -1,3 +1,40 @@
+# Lumen Rest Api with JWT Authentication
+## Installation and Usage
+
+1. Clone this repository :
+```
+https://github.com/zrruziev/lumen-rest-api-with-JWT
+```
+
+2. Install composer packages :
+```
+cd lumen-rest-api-with-JWT
+composer install
+```
+
+3. Create and setup .env file :
+   * Make a `.env` file and put database credentials in .env file :
+    ```
+    copy .env.example .env
+    ```
+    * Install lumen-key-generator from [`flipboxstudio/lumen-generate`](https://github.com/flipboxstudio/lumen-generator) repo
+    * Generate a `app_key` :
+    ```
+    php artisan key:generate
+    ```
+    * Install  [`jwt-auth-lumen`](https://jwt-auth.readthedocs.io/en/develop/lumen-installation/)
+    * Generate `jwt_secret` :
+    ```
+    php artisan jwt:secret
+    ```
+    
+4. Migrate and insert records :
+```
+php artisan migrate
+```
+
+
+
 # Lumen PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
@@ -22,3 +59,5 @@ If you discover a security vulnerability within Lumen, please send an e-mail to 
 ## License
 
 The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
